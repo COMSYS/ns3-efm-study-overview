@@ -1,0 +1,16 @@
+{
+    "which_config_files": [
+        ["analysis_test_configs_1.json", "outputPrefix1"]
+    ],
+    
+    "compress_results" : true,
+
+    "analysis_only": true,
+    "confirm_overwrite": false,
+    "debug": false,
+    "create_dirs": true,
+    "analysis_input_dir": "/REPLACE/WITH/PATH/TO/WHERE_YOU_WANT_TO_STORE_SIM_RESULTS",
+    "analysis_output_dir": "/REPLACE/WITH/PATH/TO/WHERE_YOU_WANT_TO_STORE_ANALYSIS_RESULTS",
+
+    "num_pool_workers": 2
+}

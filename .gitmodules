@@ -1,0 +1,6 @@
+[submodule "ns-3-dev-fork"]
+	path = ns-3-dev-fork
+	url = https://gitlab.com/nsnam/ns-3-dev.git
+[submodule "raw-result-processing/external/nlohmann-json"]
+	path = raw-result-processing/external/nlohmann-json
+	url = https://github.com/nlohmann/json.git

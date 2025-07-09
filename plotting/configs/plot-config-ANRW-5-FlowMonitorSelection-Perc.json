@@ -1,0 +1,8 @@
+{
+    "analysis_config": "ANRW-5-Eval-FlowAndMonitorSelectionPerc.json",
+    "df_savefile_as_configured_name": "anrw5-eval-flow_and_monitor_selection_perc-dataframe-configured.json",
+    "df_savefile_as_experienced_name": "anrw5-eval-flow_and_monitor_selection_perc-dataframe-experienced.json",
+    "plot_basename": "plot-anrw-5-flow_and_monitor_selection_perc",
+    "plot_cachefile_as_configured": "plot-anrw-5-flow_and_monitor_selection_perc-CACHE-configured.json",
+    "plot_cachefile_as_experienced": "plot-anrw-5-flow_and_monitor_selection_perc-CACHE-experienced.json"
+}

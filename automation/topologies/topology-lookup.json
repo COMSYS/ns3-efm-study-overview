@@ -1,0 +1,5 @@
+{
+    "GEANT2" : "Geant-2023.txt",
+    "TELEKOM_GERMANY" : "telekom-germany-formatted.txt",
+    "CESNET": "cesnet_topology.txt"
+}

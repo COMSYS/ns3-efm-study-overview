@@ -1,0 +1,50 @@
+{
+    "default_config_relative_in_scratch": "config.json",
+    "output_file_prefix" : "sim_anrw_configs_11",
+    "desired_topologies" : ["GEANT2", "CESNET", "TELEKOM_GERMANY"],
+    "server_max_bytes" : [2314000],
+    "traffic_scenarios" : [
+        ["ALL_TO_ALL"]
+    ],
+    "enablePing": true,
+    "ping_scenarios": [
+        ["ALL_TO_ALL", 1000, 40]
+    ],
+    "different_traffic_combinations": 1,
+    "use_failed_links": true, 
+    "failed_links" : [[
+        {
+            "link": "S1:1",
+            "lossRate": 0.01
+        }
+    ]],
+    "dynamic_failed_links": true,
+    "number_of_failed_links": [1,2,4,8,16],
+    "use_loss_link": true,
+    "link_loss_rate": [0.01],
+    "use_delay_link": false,
+    "delayMs": [5.0],
+    "different_link_combinations": 30,
+    "fix_traffic_scenarios": false,
+    "fix_failed_link_scenarios": true,
+    "output_path_prefix" : "ANRW_11",
+    "meta_outputfile_name": "ANRW-11-Sim.json",
+    "meta_template_file_name": "config-meta-sim-default.json",
+    "experiment_identifier": "anrw_11",
+    "sim_run_count": 1,
+    "num_pool_workers": 10,
+    "bblDelayMus": 1000,
+    "ehlDelayMus": 10000,
+    "ehlQueueSize": "100p",
+    "bblOverride_useRealDelay": true,
+    "bblOverride_activate": false,
+    "bblOverride": {
+        "GEANT2": [],
+        "GEANT": [],
+        "TELEKOM_GERMANY": [],
+        "CESNET": []},
+    "bblOverride_defaultLatency_Mus": 1000,
+    "randomize_rng": true,
+    "simStopMs": 1200000,
+    "ehSStopMs": 600000
+}

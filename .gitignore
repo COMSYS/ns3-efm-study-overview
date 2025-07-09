@@ -1,0 +1,13 @@
+venv/
+DFN.pdf
+GEANT.pdf
+*.DS_Store
+.vscode/
+
+raw-result-processing/build
+raw-result-processing/data/sim-output/**
+raw-result-processing/data/analysis-results/**
+!*.placeholder
+*.out
+/output
+__pycache__

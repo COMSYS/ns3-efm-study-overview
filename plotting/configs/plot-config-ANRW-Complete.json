@@ -1,0 +1,37 @@
+{
+    "plot_cache_folder": "/REPLACE/WITH/PATH/TO/WHERE_YOU_WANT_TO_STORE_PLOT_CACHE_FILES",
+    "plot_output_folder": "/REPLACE/WITH/PATH/TO/WHERE_YOU_WANT_TO_STORE_PLOTS",
+
+    "latency_plot_config": "plot-config-ANRW-10-FlowMonitorSelection-Perc.json",
+    "latency_plot_MAIN_SWITCH": true,
+    "do_baseline_latency_plot": true,
+    "baseline_latency_traffic_ratio": 1,
+    "baseline_latency_ping_interval": 1000,
+    "baseline_latency_ping_packet": 40,
+    "baseline_ping_scenario": "ALL_TO_ALL",
+    "baseline_flow_selection_strategy": "ALL",
+    "baseline_locMethod": "LIN_LSQR_CORE_ONLY",
+    "do_baseline_comparison_latency_plot": true,
+    "baseline_comparison_latency_plot_locMethod": "FLOW_COMBINATION",
+    "latency_plot_x_cut": true,
+    "USE_GROUNDTRUTH_DELAY": true,
+
+    "loss_plot_config": "plot-config-ANRW-5-FlowMonitorSelection-Perc.json",
+    "loss_plot_config_multilink": "plot-config-ANRW-11-FlowMonitorSelection-Perc.json",
+    "loss_plot_MAIN_SWITCH": true,
+    "do_baseline_loss_plot": true,
+    "do_baseline_comparison_loss_plot": false,
+    "baseline_loss_locMethod": "LIN_LSQR_CORE_ONLY",
+    "baseline_comparison_loss_plot_locMethod": "FLOW_COMBINATION",
+    "baseline_loss_traffic_ratio": 1,
+    "baseline_loss_ping_interval": 1000,
+    "baseline_loss_ping_packet": 40,
+    "baseline_loss_loss_rate": 0.01,
+    "baseline_loss_failed_links": 1,
+    "do_qbit_loss_combined_multi_link_packet_loss_ratio_plot": true,
+
+    "use_plot_cache": true,
+    
+    "pdf_mode": true,
+    "force_refresh": false
+}

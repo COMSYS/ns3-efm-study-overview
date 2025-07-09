@@ -1,0 +1,278 @@
+[
+  {
+    "link": "2:1",
+    "delayMus": 288
+  },
+  {
+    "link": "1:0",
+    "delayMus": 916
+  },
+  {
+    "link": "0:3",
+    "delayMus": 1748
+  },
+  {
+    "link": "1:4",
+    "delayMus": 1680
+  },
+  {
+    "link": "3:4",
+    "delayMus": 1075
+  },
+  {
+    "link": "4:20",
+    "delayMus": 2728
+  },
+  {
+    "link": "3:5",
+    "delayMus": 2479
+  },
+  {
+    "link": "5:8",
+    "delayMus": 2799
+  },
+  {
+    "link": "7:8",
+    "delayMus": 733
+  },
+  {
+    "link": "7:6",
+    "delayMus": 1549
+  },
+  {
+    "link": "9:13",
+    "delayMus": 7048
+  },
+  {
+    "link": "6:14",
+    "delayMus": 1195
+  },
+  {
+    "link": "6:5",
+    "delayMus": 1147
+  },
+  {
+    "link": "5:15",
+    "delayMus": 881
+  },
+  {
+    "link": "5:19",
+    "delayMus": 1368
+  },
+  {
+    "link": "19:20",
+    "delayMus": 1097
+  },
+  {
+    "link": "20:21",
+    "delayMus": 1294
+  },
+  {
+    "link": "20:46",
+    "delayMus": 3785
+  },
+  {
+    "link": "20:43",
+    "delayMus": 9529
+  },
+  {
+    "link": "46:21",
+    "delayMus": 3845
+  },
+  {
+    "link": "14:15",
+    "delayMus": 580
+  },
+  {
+    "link": "15:16",
+    "delayMus": 623
+  },
+  {
+    "link": "16:18",
+    "delayMus": 639
+  },
+  {
+    "link": "14:17",
+    "delayMus": 1225
+  },
+  {
+    "link": "14:18",
+    "delayMus": 1217
+  },
+  {
+    "link": "18:19",
+    "delayMus": 1579
+  },
+  {
+    "link": "19:21",
+    "delayMus": 836
+  },
+  {
+    "link": "13:17",
+    "delayMus": 967
+  },
+  {
+    "link": "13:10",
+    "delayMus": 1611
+  },
+  {
+    "link": "10:11",
+    "delayMus": 1396
+  },
+  {
+    "link": "11:12",
+    "delayMus": 1325
+  },
+  {
+    "link": "12:13",
+    "delayMus": 2950
+  },
+  {
+    "link": "13:22",
+    "delayMus": 1190
+  },
+  {
+    "link": "17:22",
+    "delayMus": 849
+  },
+  {
+    "link": "18:23",
+    "delayMus": 1369
+  },
+  {
+    "link": "21:24",
+    "delayMus": 2090
+  },
+  {
+    "link": "21:31",
+    "delayMus": 1396
+  },
+  {
+    "link": "21:44",
+    "delayMus": 3251
+  },
+  {
+    "link": "21:41",
+    "delayMus": 4886
+  },
+  {
+    "link": "21:43",
+    "delayMus": 8858
+  },
+  {
+    "link": "20:42",
+    "delayMus": 8555
+  },
+  {
+    "link": "41:42",
+    "delayMus": 3054
+  },
+  {
+    "link": "41:40",
+    "delayMus": 1013
+  },
+  {
+    "link": "40:44",
+    "delayMus": 911
+  },
+  {
+    "link": "44:45",
+    "delayMus": 440
+  },
+  {
+    "link": "39:40",
+    "delayMus": 1727
+  },
+  {
+    "link": "37:39",
+    "delayMus": 1695
+  },
+  {
+    "link": "37:40",
+    "delayMus": 769
+  },
+  {
+    "link": "38:40",
+    "delayMus": 654
+  },
+  {
+    "link": "38:37",
+    "delayMus": 580
+  },
+  {
+    "link": "45:33",
+    "delayMus": 937
+  },
+  {
+    "link": "33:37",
+    "delayMus": 1099
+  },
+  {
+    "link": "32:33",
+    "delayMus": 1228
+  },
+  {
+    "link": "31:32",
+    "delayMus": 390
+  },
+  {
+    "link": "37:36",
+    "delayMus": 988
+  },
+  {
+    "link": "36:35",
+    "delayMus": 1192
+  },
+  {
+    "link": "35:34",
+    "delayMus": 1336
+  },
+  {
+    "link": "34:28",
+    "delayMus": 3230
+  },
+  {
+    "link": "30:36",
+    "delayMus": 2122
+  },
+  {
+    "link": "30:32",
+    "delayMus": 1018
+  },
+  {
+    "link": "29:30",
+    "delayMus": 560
+  },
+  {
+    "link": "29:24",
+    "delayMus": 191
+  },
+  {
+    "link": "24:23",
+    "delayMus": 843
+  },
+  {
+    "link": "23:28",
+    "delayMus": 1041
+  },
+  {
+    "link": "28:22",
+    "delayMus": 804
+  },
+  {
+    "link": "28:27",
+    "delayMus": 1792
+  },
+  {
+    "link": "27:26",
+    "delayMus": 762
+  },
+  {
+    "link": "26:25",
+    "delayMus": 744
+  },
+  {
+    "link": "12:25",
+    "delayMus": 745
+  }
+]

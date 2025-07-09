@@ -1,0 +1,233 @@
+[
+    {
+        "storeMeasurements": true,
+        "performLocalization": true,
+        "classification_base_id": "base_id_1", 
+        "lossRateTh": 0.01,
+        "delayThMs": 100,
+        "flowLengthTh": 0,
+        "classificationModes": [
+            "STATIC",
+            "PERFECT"
+        ],
+        "simFilter": {
+            "lBitTriggeredMonitoring": false,
+            "removeLastXSpinTransients": 1
+        },
+        "localizationMethods": {
+            "POSSIBLE": {},
+            "PROBABLE": {},
+            "WEIGHT_ITER": {
+                "winc": 1.5,
+                "wdec": 0.5,
+                "wscale": 1.0,
+                "wthresh": 1.0,
+                "pathscale": 1.0
+            },
+            "WEIGHT_ITER_LVL": {
+                "winc_lvl1": 1.5,
+                "winc_lvl2": 1.5,
+                "winc_lvl3": 1.5,
+                "wdec": 0.5,
+                "wscale": 1.0,
+                "wthresh": 1.0,
+                "pathscale": 1.0
+            },
+            "WEIGHT_DIR": {
+                "winc": 1.5,
+                "wdec": 0.5,
+                "wscale": 1.0,
+                "wthresh": 1.0,
+                "pathscale": 1.0
+            },
+            "WEIGHT_DIR_LVL": {
+                "winc_lvl1": 1.5,
+                "winc_lvl2": 1.5,
+                "winc_lvl3": 1.5,
+                "wdec": 0.5,
+                "wscale": 1.0,
+                "wthresh": 1.0,
+                "pathscale": 1.0
+            },
+            "WEIGHT_BAD": {
+                "winc": 1.5,
+                "wdec": 0.5,
+                "wscale": 1.0,
+                "wthresh": 1.0,
+                "pathscale": 1.0
+            },
+            "WEIGHT_BAD_LVL": {
+                "winc_lvl1": 1.5,
+                "winc_lvl2": 1.5,
+                "winc_lvl3": 1.5,
+                "wdec": 0.5,
+                "wscale": 1.0,
+                "wthresh": 1.0,
+                "pathscale": 1.0
+            },
+            "DETECTION": {},
+            "DLC": {
+                "dlcthresh": 0.7
+            },
+            "LP_WITH_SLACK": {}
+        },
+        "observerSets": [
+            {
+                "observers": [],
+                "metadata": {
+                    "name": "all"
+                }
+            }
+        ],
+        "efmBitSets": [
+            [
+                "Q"
+            ],
+            [
+                "L"
+            ],
+            [
+                "R"
+            ],
+            [
+                "T"
+            ],
+            [
+                "SPIN"
+            ],
+            [
+                "Q",
+                "R",
+                "QR"
+            ],
+            [
+                "Q",
+                "L",
+                "QL"
+            ],
+            [
+                "Q",
+                "T",
+                "QT"
+            ],
+            [
+                "L",
+                "T",
+                "LT"
+            ],
+            [
+                "SEQ"
+            ],
+            [
+                "TCPRO"
+            ],
+            [
+                "TCPDART"
+            ],
+            [
+                "PINGDLY"
+            ],
+            [
+                "PINGLSS"
+            ]
+        ]
+    },
+    {
+        "storeMeasurements": true,
+        "performLocalization": true,
+        "classification_base_id": "base_id_2", 
+        "lossRateTh": 0.01,
+        "delayThMs": 100,
+        "flowLengthTh": 0,
+        "classificationModes": [
+            "STATIC"
+        ],
+        "simFilter": {
+            "lBitTriggeredMonitoring": true,
+            "removeLastXSpinTransients": 1
+        },
+        "localizationMethods": {
+            "POSSIBLE": {},
+            "PROBABLE": {},
+            "WEIGHT_ITER": {
+                "winc": 1.5,
+                "wdec": 0.5,
+                "wscale": 1.0,
+                "wthresh": 1.0,
+                "pathscale": 1.0
+            },
+            "WEIGHT_DIR": {
+                "winc": 1.5,
+                "wdec": 0.5,
+                "wscale": 1.0,
+                "wthresh": 1.0,
+                "pathscale": 1.0
+            },
+            "DETECTION": {},
+            "DLC": {
+                "dlcthresh": 0.7
+            },
+            "LP_WITH_SLACK": {}
+        },
+        "observerSets": [
+            {
+                "observers": [],
+                "metadata": {
+                    "name": "all"
+                }
+            }
+        ],
+        "efmBitSets": [
+            [
+                "Q"
+            ],
+            [
+                "L"
+            ],
+            [
+                "R"
+            ],
+            [
+                "T"
+            ],
+            [
+                "SPIN"
+            ],
+            [
+                "Q",
+                "R",
+                "QR"
+            ],
+            [
+                "Q",
+                "L",
+                "QL"
+            ],
+            [
+                "Q",
+                "T",
+                "QT"
+            ],
+            [
+                "L",
+                "T",
+                "LT"
+            ],
+            [
+                "SEQ"
+            ],
+            [
+                "TCPRO"
+            ],
+            [
+                "TCPDART"
+            ],
+            [
+                "PINGDLY"
+            ],
+            [
+                "PINGLSS"
+            ]
+        ]
+    }
+]

@@ -1,0 +1,25 @@
+---
+Language: Cpp
+BasedOnStyle: Google
+MaxEmptyLinesToKeep: 2
+BreakBeforeBraces: Custom
+BraceWrapping:
+  AfterClass: true
+  AfterControlStatement: true
+  AfterEnum: true
+  AfterFunction: true
+  AfterNamespace: false
+  AfterObjCDeclaration: true
+  AfterStruct: true
+  AfterUnion: true
+  BeforeCatch: true
+  BeforeElse: true
+  IndentBraces: false
+  AfterCaseLabel: true
+AccessModifierOffset: -2
+ColumnLimit: 100
+AlignAfterOpenBracket: Align
+NamespaceIndentation: None
+AllowShortIfStatementsOnASingleLine: Never
+EmptyLineBeforeAccessModifier: Always
+...

@@ -1,0 +1,22 @@
+{
+    "which_config_files": [
+        ["test_configs_1.json", "outputPrefix1"]
+    ],
+    "build": false,
+    "compress_results" : true,
+    "sim_only": true,
+    "confirm_overwrite" : false, 
+    "debug": false,
+    "create_dirs": true,
+    "sim_run_count": 10,
+    "sim_run_offset": 0,
+    "sim_output_dir": "/REPLACE/WITH/PATH/TO/WHERE_YOU_WANT_TO_STORE_SIM_RESULTS",
+
+    "sim_traces_per_file": 0,
+    "sim_trace_events_per_file": 10000000,
+    "sim_enable_on_the_fly_qlog": true,
+    "sim_disable_obsv_traces": false,
+    "sim_disable_host_traces": true,
+
+    "num_pool_workers": 2
+}

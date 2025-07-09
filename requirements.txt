@@ -1,0 +1,12 @@
+matplotlib
+networkx
+requests
+jsonschema
+natsort
+pydantic
+bs4
+lxml
+pandas
+scipy
+gurobipy
+geopy

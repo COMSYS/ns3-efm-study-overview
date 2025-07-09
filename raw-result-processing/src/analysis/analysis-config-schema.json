@@ -1,0 +1,498 @@
+{
+    "type": "array",
+    "minItems": 1,
+    "items": {
+        "type": "object",
+        "properties": {
+            "storeMeasurements": {
+                "type": "boolean"
+            },
+            "performLocalization": {
+                "type": "boolean"
+            },
+            "output_raw_values": {
+                "type": "boolean"
+            },
+            "classification_base_id": {
+                "type": "string"
+            },            
+            "lossRateTh": {
+                "type": "number",
+                "minimum": 0.0,
+                "maximum": 1.0
+            },
+            "delayThMs": {
+                "type": "integer",
+                "minimum": 0
+            },
+            "autoLossRateThOffset": {
+                "type": "number",
+                "minimum": -1.0,
+                "maximum": 1.0
+            },
+            "autoDelayThOffsetMs": {
+                "type": "integer"
+            },
+            "flowLengthTh": {
+                "type": "integer",
+                "minimum": 0
+            },
+            "classificationModes": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                    "type": "string",
+                    "enum": [
+                        "STATIC",
+                        "PERFECT"
+                    ]
+                }
+            },
+            "time_filter_ms": {
+                "type": "number",
+                "minimum": 0
+            },
+            "simFilter": {
+                "type": "object",
+                "properties": {
+                    "lBitTriggeredMonitoring": {
+                        "type": "boolean"
+                    },
+                    "removeLastXSpinTransients": {
+                        "type": "integer",
+                        "minimum": 0
+                    }
+                }
+            },
+            "localizationMethods": {
+                "$ref": "#/$defs/locMethods"
+            },
+            "flowSelectionStrategies": {
+                "$ref": "#/$defs/flowSelectionStrats"
+            },
+            "observerSets": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                    "oneOf": [
+                        {
+                            "type": "array",
+                            "items": {
+                                "type": "integer",
+                                "minimum": 0
+                            }
+                        },
+                        {
+                            "type": "object",
+                            "properties": {
+                                "metadata": {
+                                    "type": "object"
+                                },
+                                "observers": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "integer",
+                                        "minimum": 0
+                                    }
+                                }
+                            },
+                            "additionalProperties": false,
+                            "required": [
+                                "observers"
+                            ]
+                        }
+                    ]
+                }
+            },
+            "efmBitSets": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                        "type": "string",
+                        "enum": [
+                            "Q",
+                            "L",
+                            "R",
+                            "T",
+                            "SPIN",
+                            "QR",
+                            "QL",
+                            "QT",
+                            "LT",
+                            "SEQ",
+                            "TCPRO",
+                            "TCPDART",
+                            "PINGDLY",
+                            "PINGLSS"
+                        ]
+                    }
+                }
+            }
+        },
+        "additionalProperties": false,
+        "oneOf": [
+            {
+                "required": [
+                    "storeMeasurements",
+                    "performLocalization",
+                    "lossRateTh",
+                    "delayThMs",
+                    "classificationModes",
+                    "simFilter",
+                    "localizationMethods",
+                    "observerSets",
+                    "efmBitSets"
+                ]
+            },
+            {
+                "required": [
+                    "storeMeasurements",
+                    "performLocalization",
+                    "autoLossRateThOffset",
+                    "autoDelayThOffsetMs",
+                    "classificationModes",
+                    "simFilter",
+                    "localizationMethods",
+                    "observerSets",
+                    "efmBitSets"
+                ]
+            }
+        ]
+    },
+    "$defs": {
+        "locMethods": {
+            "type": "object",
+            "properties": {
+                "DLC": {                        
+                    "type": "object",
+                    "properties": {
+                        "dlcthresh": {
+                            "type": "number",
+                            "minimum": 0.0,
+                            "maximum": 1.0
+                        }
+                    },
+                    "additionalProperties":false,
+                    "required": ["dlcthresh"]
+                },
+                "POSSIBLE": {                        
+                    "type": "object",
+                    "properties": {},
+                    "additionalProperties":false
+                },
+                "PROBABLE": {                          
+                    "type": "object",
+                    "properties": {},
+                    "additionalProperties":false
+                },
+                "DETECTION": {                        
+                    "type": "object",
+                    "properties": {},
+                    "additionalProperties":false
+                },
+                "WEIGHT_ITER": {                        
+                    "type": "object",
+                    "properties": {
+                        "winc": {
+                            "type": "number",
+                            "exclusiveMinimum": 1.0
+                        },
+                        "wdec": {
+                            "type": "number",
+                            "exclusiveMinimum": 0.0,
+                            "exclusiveMaximum": 1.0
+                        },
+                        "wscale": {
+                            "type": "number",
+                            "minimum": 0.0,
+                            "maximum": 1.0
+                        },
+                        "wthresh": {
+                            "type": "number"
+                        },
+                        "pathscale": {
+                            "type": "number",
+                            "minimum": 0.0,
+                            "maximum": 1.0
+                        },
+                        "normalization": {
+                            "type": "number",
+                            "minimum": 0.0,
+                            "maximum": 1.0
+                        }
+                    },
+                    "additionalProperties":false,
+                    "required": ["winc", "wdec", "wscale", "wthresh", "pathscale", "normalization"]
+                },
+                "WEIGHT_DIR": {                        
+                    "type": "object",
+                    "properties": {
+                        "winc": {
+                            "type": "number",
+                            "exclusiveMinimum": 1.0
+                        },
+                        "wdec": {
+                            "type": "number",
+                            "exclusiveMinimum": 0.0,
+                            "exclusiveMaximum": 1.0
+                        },
+                        "wscale": {
+                            "type": "number",
+                            "minimum": 0.0,
+                            "maximum": 1.0
+                        },
+                        "wthresh": {
+                            "type": "number"
+                        },
+                        "pathscale": {
+                            "type": "number",
+                            "minimum": 0.0,
+                            "maximum": 1.0
+                        },
+                        "normalization": {
+                            "type": "number",
+                            "minimum": 0.0,
+                            "maximum": 1.0
+                        }
+                    },
+                    "additionalProperties":false,
+                    "required": ["winc", "wdec", "wscale", "wthresh", "pathscale", "normalization"]
+                },
+                "WEIGHT_BAD": {                        
+                    "type": "object",
+                    "properties": {
+                        "winc": {
+                            "type": "number",
+                            "exclusiveMinimum": 1.0
+                        },
+                        "wdec": {
+                            "type": "number",
+                            "exclusiveMinimum": 0.0,
+                            "exclusiveMaximum": 1.0
+                        },
+                        "wscale": {
+                            "type": "number",
+                            "minimum": 0.0,
+                            "maximum": 1.0
+                        },
+                        "wthresh": {
+                            "type": "number"
+                        },
+                        "pathscale": {
+                            "type": "number",
+                            "minimum": 0.0,
+                            "maximum": 1.0
+                        },
+                        "normalization": {
+                            "type": "number",
+                            "minimum": 0.0,
+                            "maximum": 1.0
+                        }
+                    },
+                    "additionalProperties":false,
+                    "required": ["winc", "wdec", "wscale", "wthresh", "pathscale", "normalization"]
+                },
+                "WEIGHT_ITER_LVL": {                        
+                    "type": "object",
+                    "properties": {
+                        "winc_lvl1": {
+                            "type": "number",
+                            "exclusiveMinimum": 1.0
+                        },
+                        "winc_lvl2": {
+                            "type": "number",
+                            "exclusiveMinimum": 1.0
+                        },
+                        "winc_lvl3": {
+                            "type": "number",
+                            "exclusiveMinimum": 1.0
+                        },
+                        "wdec": {
+                            "type": "number",
+                            "exclusiveMinimum": 0.0,
+                            "exclusiveMaximum": 1.0
+                        },
+                        "wscale": {
+                            "type": "number",
+                            "minimum": 0.0,
+                            "maximum": 1.0
+                        },
+                        "wthresh": {
+                            "type": "number"
+                        },
+                        "pathscale": {
+                            "type": "number",
+                            "minimum": 0.0,
+                            "maximum": 1.0
+                        },
+                        "normalization": {
+                            "type": "number",
+                            "minimum": 0.0,
+                            "maximum": 1.0
+                        }
+                    },
+                    "additionalProperties":false,
+                    "required": ["winc_lvl1", "winc_lvl2", "winc_lvl3", "wdec", "wscale", "wthresh", "pathscale", "normalization"]
+                },
+                "WEIGHT_DIR_LVL": {                      
+                    "type": "object",
+                    "properties": {
+                        "winc_lvl1": {
+                            "type": "number",
+                            "exclusiveMinimum": 1.0
+                        },
+                        "winc_lvl2": {
+                            "type": "number",
+                            "exclusiveMinimum": 1.0
+                        },
+                        "winc_lvl3": {
+                            "type": "number",
+                            "exclusiveMinimum": 1.0
+                        },
+                        "wdec": {
+                            "type": "number",
+                            "exclusiveMinimum": 0.0,
+                            "exclusiveMaximum": 1.0
+                        },
+                        "wscale": {
+                            "type": "number",
+                            "minimum": 0.0,
+                            "maximum": 1.0
+                        },
+                        "wthresh": {
+                            "type": "number"
+                        },
+                        "pathscale": {
+                            "type": "number",
+                            "minimum": 0.0,
+                            "maximum": 1.0
+                        },
+                        "normalization": {
+                            "type": "number",
+                            "minimum": 0.0,
+                            "maximum": 1.0
+                        }
+                    },
+                    "additionalProperties":false,
+                    "required": ["winc_lvl1", "winc_lvl2", "winc_lvl3", "wdec", "wscale", "wthresh", "pathscale", "normalization"]
+                },
+                "WEIGHT_BAD_LVL": {                        
+                    "type": "object",
+                    "properties": {
+                        "winc_lvl1": {
+                            "type": "number",
+                            "exclusiveMinimum": 1.0
+                        },
+                        "winc_lvl2": {
+                            "type": "number",
+                            "exclusiveMinimum": 1.0
+                        },
+                        "winc_lvl3": {
+                            "type": "number",
+                            "exclusiveMinimum": 1.0
+                        },
+                        "wdec": {
+                            "type": "number",
+                            "exclusiveMinimum": 0.0,
+                            "exclusiveMaximum": 1.0
+                        },
+                        "wscale": {
+                            "type": "number",
+                            "minimum": 0.0,
+                            "maximum": 1.0
+                        },
+                        "wthresh": {
+                            "type": "number"
+                        },
+                        "pathscale": {
+                            "type": "number",
+                            "minimum": 0.0,
+                            "maximum": 1.0
+                        },
+                        "normalization": {
+                            "type": "number",
+                            "minimum": 0.0,
+                            "maximum": 1.0
+                        }
+                    },
+                    "additionalProperties":false,
+                    "required": ["winc_lvl1", "winc_lvl2", "winc_lvl3", "wdec", "wscale", "wthresh", "pathscale", "normalization"]
+                },
+                "LIN_LSQR" : {                          
+                    "type": "object",
+                    "properties": {},
+                    "additionalProperties":false
+                },
+                "LIN_LSQR_CORE_ONLY" : {                          
+                    "type": "object",
+                    "properties": {},
+                    "additionalProperties":false
+                },
+                "LIN_LSQR_LVL" : {                          
+                    "type": "object",
+                    "properties": {},
+                    "additionalProperties":false
+                },
+                "FLOW_COMBINATION" : {                          
+                    "type": "object",
+                    "properties": {},
+                    "additionalProperties":false
+                },
+                "LIN_LSQR_FIXED_FLOWS" : {                          
+                    "type": "object",
+                    "properties": {},
+                    "additionalProperties":false
+                },
+                "LIN_LSQR_CORE_ONLY_FIXED_FLOWS" : {                          
+                    "type": "object",
+                    "properties": {},
+                    "additionalProperties":false
+                },
+                "FLOW_COMBINATION_FIXED_FLOWS" : {                          
+                    "type": "object",
+                    "properties": {},
+                    "additionalProperties":false
+                }
+            },
+            "additionalProperties": false
+
+        },
+        "flowSelectionStrats": {
+            "type": "object",
+            "properties": {
+                "ALL" : {                          
+                    "type": "object",
+                    "properties": {},
+                    "additionalProperties":false
+                },
+                "COVERAGE": {                        
+                    "type": "object",
+                    "properties": {
+                        "flow_count": {
+                            "type": "integer",
+                            "minimum": 1
+                        }
+                    },
+                    "additionalProperties":false,
+                    "required": ["flow_count"]
+                },
+                "RANDOM": {                        
+                    "type": "object",
+                    "properties": {
+                        "flow_count": {
+                            "type": "integer",
+                            "minimum": 1
+                        }
+                    },
+                    "additionalProperties":false,
+                    "required": ["flow_count"]
+                }
+            },
+            "additionalProperties": false
+
+        }
+    }
+}

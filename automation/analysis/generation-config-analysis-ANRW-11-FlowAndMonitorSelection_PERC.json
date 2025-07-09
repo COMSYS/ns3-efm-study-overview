@@ -1,0 +1,35 @@
+{
+    "default_config_relative_result_processing_data": "analysis-default-config.json",
+    "output_file_prefix" : "analysis_ANRW_11_configs_flow_and_monitor_selection_perc",
+    "simulation_meta_file_name": "ANRW-11-Sim.json",
+    "analysis_meta_outputfile_name": "ANRW-11-Eval-FlowAndMonitorSelectionPerc.json",
+    "experiment_identifier": "anrw_11",
+    "analysis_folder_prefix": "anrw_11_evaluation_flow_and_monitor_selection_perc",
+    "confirm_overwrite": false,
+
+
+    "storeMeasurements": true,
+    "performLocalization": true,
+    "classification_base_id" :"anrw_11_base_id_flow_and_monitor_selection_perc",
+    "lossRateTh": [0.01],
+    "delayThMs": [100],
+    "classificationModes": [["STATIC","PERFECT"]],
+    "simFilter": [{
+        "lBitTriggeredMonitoring": false,
+        "removeLastXSpinTransients": 1
+      }],
+    "localizationMethods": [{   
+        "LIN_LSQR": {},
+        "LIN_LSQR_CORE_ONLY": {},
+        "FLOW_COMBINATION": {},
+        "LIN_LSQR_FIXED_FLOWS": {},
+        "LIN_LSQR_CORE_ONLY_FIXED_FLOWS": {},
+        "FLOW_COMBINATION_FIXED_FLOWS": {}
+      }], 
+    "flowSelectionStrategies": [{            
+        "ALL": {}}], 
+    "observerSets": [["explicit", [[]]]
+    ],
+    "efmBitSets": [[["PINGLSS"], ["PINGDLY"],["SEQ"],["Q"],["L"],["R"],["TCPRO"], ["SPIN"], ["TCPDART"]]],
+    "output_raw_values": false
+}
